@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#container{
+ height: 100Vh;
+ display:grid;
+ grid-template-columns: repeat(12,1fr);
+ grid-template-rows: repeat(12,1fr);
+ grid-template-areas: "h h h h h h h h h h h h"
+                      "h h h h h h h h h h h h"
+                      "p p d d d d d d d d d d"
+                      "p p d d d d d d d d d d"
+                      "p p d d d d d d d d d d"
+                      "p p d d d d d d d d d d"
+                      "p p d d d d d d d d d d"
+                      "p p d d d d d d d d d d"
+                      "p p d d d d d d d d d d"
+                      "p p d d d d d d d d d d"
+                      "p p d d d d d d d d d d"
+                      "f f f f f f f f f f f f";
+}
+header{
+    grid-area: h;
+    display: flex;
+    flex-direction: column;
+    background-color: darkgrey;
+    
+}
+header #addProject{
+    align-self: center;
+}
+header h1{
+    background-color: grey;
+}
+#addProject button:hover{
+    color: white;
+    background-color: rgba(225, 16, 16, 0.884);
+    transition: 0.5s;
+}
+.button{
+    background-color: darkgrey;
+    font-size: 1.5rem;
+    border: none;
+    align-self: center;
+}
+#projects{
+    background-color: #2bf22a;
+    grid-area: p;
+    overflow-y: scroll;
+}
+#projects h2{
+    text-align: center;
+}
+p{
+    margin:0.2rem auto
+}
+p>button{
+    letter-spacing: 0.1rem;
+    font-size: large;
+    border: none;
+    padding: 0.3rem;
+    
+}
+.project{
+    background-color: rebeccapurple;
+    height: inherit;
+    width:inherit;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonProjects,#home{
+    width:max-content;
+    padding: 2px 5px;
+    background-color: rgb(213, 169, 124);
+    font-size: large;
+    margin: 3px 1px;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+#displayProjects{
+    width: 7rem;
+    margin-left: 3rem;
+}
+#display{
+    background-color: #e67b10;
+    grid-area: d;
+}
+#footer{
+    background-color: rgb(171, 117, 221);
+    grid-area: f;
+}
